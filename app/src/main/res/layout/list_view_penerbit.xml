@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="7dp"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <com.pkmmte.view.CircularImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:gravity="left|center"
+                android:scaleType="centerCrop"
+                android:id="@+id/logo_penerbit"
+                android:src="@drawable/print"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                app:border="true"
+                app:border_width="2dp"
+                app:shadow="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="left|center"
+                android:textColor="#000000"
+                android:id="@+id/nama_penerbit"
+                android:layout_toRightOf="@+id/logo_penerbit"
+                android:layout_alignParentTop="true"
+                android:text="Judul"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/jumlah_buku"
+                android:text="pengarang"
+                android:textStyle="bold"
+                android:textColor="#2b2929"
+                android:layout_alignBottom="@+id/logo_penerbit"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#898989"
+                android:text="Jumlah buku : "
+                android:layout_alignBottom="@+id/jumlah_buku"
+                android:layout_toStartOf="@+id/jumlah_buku" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
